@@ -1,0 +1,13 @@
+# vscode
+.vscode
+
+# compile
+main
+compile_commands.json
+
+# clangd
+.cache
+.clangd
+
+# script outputs
+rvv_intrinsic/
