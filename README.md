@@ -17,7 +17,7 @@ While the compiler can recognize these, `clangd` currently does not. It may supp
 
 Let's write some RVV code!
 
-![demo](demo.gif)
+![demo](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDg0dW1zandwNzFkZGoyNWp3YTZlMnZwdzZ0aDYxdHhyaTZraWhkZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lQUGbpbTKQBWVulhxS/giphy.gif)
 
 ## How to Use
 
