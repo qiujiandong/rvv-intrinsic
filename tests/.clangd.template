@@ -1,6 +1,6 @@
 CompileFlags:
   Add:
     [
-      -include/home/qiujiandong/rvv-intrinsic/rvv_intrinsic/rvv_intrinsic.h,
-      -I/home/qiujiandong/rvv-intrinsic/rvv_intrinsic,
+      -include/path/to/repo/rvv_intrinsic/rvv_intrinsic.h,
+      -I/path/to/repo/rvv-intrinsic/rvv_intrinsic,
     ]

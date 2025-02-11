@@ -17,9 +17,9 @@ def save_file(root, output_file: pathlib.Path, contents):
         f.write("#include <stdint.h>\n")
         f.write("#include <riscv_vector.h>\n\n")
 
-        f.write("typedef _Float16 float16_t;")
-        f.write("typedef float float32_t;")
-        f.write("typedef double float64_t;")
+        f.write("typedef _Float16 float16_t;\n")
+        f.write("typedef float float32_t;\n")
+        f.write("typedef double float64_t;\n")
 
         f.write(content)
         
