@@ -93,3 +93,8 @@ If you have the `clangd` [plugin](https://clangd.llvm.org/installation#editor-pl
 ---
 
 Let me know if you'd like to adjust anything further!
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE-2.0.txt](./LICENSE-2.0.txt) file for details.
+
