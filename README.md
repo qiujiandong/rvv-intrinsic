@@ -96,5 +96,5 @@ Let me know if you'd like to adjust anything further!
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE-2.0.txt](./LICENSE-2.0.txt) file for details.
+This project is licensed under the Apache License 2.0 - see the [LICENSE.txt](./LICENSE.txt) file for details.
 
