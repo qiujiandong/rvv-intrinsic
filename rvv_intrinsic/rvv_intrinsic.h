@@ -47,6 +47,17 @@ typedef double float64_t;
 #include "intrinsic_funcs/zfh_zvfh_zve32f/09_vector_mask_functions.h"
 #include "intrinsic_funcs/zfh_zvfh_zve32f/10_vector_permutation_functions.h"
 #include "intrinsic_funcs/zfh_zvfh_zve32f/11_miscellaneous_vector_functions.h"
+#include "policy_funcs/intrinsic_funcs/zfh_zvfh_zve32f/01_vector_loads_and_stores_functions.h"
+#include "policy_funcs/intrinsic_funcs/zfh_zvfh_zve32f/02_vector_unit-stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zfh_zvfh_zve32f/03_vector_stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zfh_zvfh_zve32f/04_vector_indexed_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zfh_zvfh_zve32f/05_vector_integer_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zfh_zvfh_zve32f/06_vector_fixed-point_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zfh_zvfh_zve32f/07_vector_floating-point_functions.h"
+#include "policy_funcs/intrinsic_funcs/zfh_zvfh_zve32f/08_vector_reduction_functions.h"
+#include "policy_funcs/intrinsic_funcs/zfh_zvfh_zve32f/09_vector_mask_functions.h"
+#include "policy_funcs/intrinsic_funcs/zfh_zvfh_zve32f/10_vector_permutation_functions.h"
+#include "policy_funcs/intrinsic_funcs/zfh_zvfh_zve32f/11_miscellaneous_vector_functions.h"
 #endif // defined(SUPPORT_VEC_F16)
 
 #if defined(SUPPORT_VEC_32X)
@@ -61,10 +72,20 @@ typedef double float64_t;
 #include "intrinsic_funcs/zve32x/09_vector_mask_functions.h"
 #include "intrinsic_funcs/zve32x/10_vector_permutation_functions.h"
 #include "intrinsic_funcs/zve32x/11_miscellaneous_vector_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32x/01_vector_loads_and_stores_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32x/02_vector_unit-stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve32x/03_vector_stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve32x/04_vector_indexed_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve32x/05_vector_integer_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32x/06_vector_fixed-point_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32x/07_vector_floating-point_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32x/08_vector_reduction_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32x/09_vector_mask_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32x/10_vector_permutation_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32x/11_miscellaneous_vector_functions.h"
 #endif // defined(SUPPORT_VEC_32X)
 
 #if defined(SUPPORT_VEC_32F)
-#include "intrinsic_funcs/zve32f/00_configuration-setting_and_utility_functions.h"
 #include "intrinsic_funcs/zve32f/01_vector_loads_and_stores_functions.h"
 #include "intrinsic_funcs/zve32f/02_vector_unit-stride_segment_load_store_instructions_zvlsseg.h"
 #include "intrinsic_funcs/zve32f/03_vector_stride_segment_load_store_instructions_zvlsseg.h"
@@ -76,10 +97,20 @@ typedef double float64_t;
 #include "intrinsic_funcs/zve32f/09_vector_mask_functions.h"
 #include "intrinsic_funcs/zve32f/10_vector_permutation_functions.h"
 #include "intrinsic_funcs/zve32f/11_miscellaneous_vector_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32f/01_vector_loads_and_stores_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32f/02_vector_unit-stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve32f/03_vector_stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve32f/04_vector_indexed_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve32f/05_vector_integer_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32f/06_vector_fixed-point_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32f/07_vector_floating-point_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32f/08_vector_reduction_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32f/09_vector_mask_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32f/10_vector_permutation_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve32f/11_miscellaneous_vector_functions.h"
 #endif // defined(SUPPORT_VEC_32F)
 
 #if defined(SUPPORT_VEC_64X)
-#include "intrinsic_funcs/zve64x/00_configuration-setting_and_utility_functions.h"
 #include "intrinsic_funcs/zve64x/01_vector_loads_and_stores_functions.h"
 #include "intrinsic_funcs/zve64x/02_vector_unit-stride_segment_load_store_instructions_zvlsseg.h"
 #include "intrinsic_funcs/zve64x/03_vector_stride_segment_load_store_instructions_zvlsseg.h"
@@ -91,10 +122,20 @@ typedef double float64_t;
 #include "intrinsic_funcs/zve64x/09_vector_mask_functions.h"
 #include "intrinsic_funcs/zve64x/10_vector_permutation_functions.h"
 #include "intrinsic_funcs/zve64x/11_miscellaneous_vector_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64x/01_vector_loads_and_stores_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64x/02_vector_unit-stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve64x/03_vector_stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve64x/04_vector_indexed_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve64x/05_vector_integer_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64x/06_vector_fixed-point_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64x/07_vector_floating-point_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64x/08_vector_reduction_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64x/09_vector_mask_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64x/10_vector_permutation_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64x/11_miscellaneous_vector_functions.h"
 #endif // defined(SUPPORT_VEC_64X)
 
 #if defined(SUPPORT_VEC_64F)
-#include "intrinsic_funcs/zve64f/00_configuration-setting_and_utility_functions.h"
 #include "intrinsic_funcs/zve64f/01_vector_loads_and_stores_functions.h"
 #include "intrinsic_funcs/zve64f/02_vector_unit-stride_segment_load_store_instructions_zvlsseg.h"
 #include "intrinsic_funcs/zve64f/03_vector_stride_segment_load_store_instructions_zvlsseg.h"
@@ -106,10 +147,20 @@ typedef double float64_t;
 #include "intrinsic_funcs/zve64f/09_vector_mask_functions.h"
 #include "intrinsic_funcs/zve64f/10_vector_permutation_functions.h"
 #include "intrinsic_funcs/zve64f/11_miscellaneous_vector_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64f/01_vector_loads_and_stores_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64f/02_vector_unit-stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve64f/03_vector_stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve64f/04_vector_indexed_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve64f/05_vector_integer_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64f/06_vector_fixed-point_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64f/07_vector_floating-point_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64f/08_vector_reduction_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64f/09_vector_mask_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64f/10_vector_permutation_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64f/11_miscellaneous_vector_functions.h"
 #endif // defined(SUPPORT_VEC_64F)
 
 #if defined(SUPPORT_VEC_64D)
-#include "intrinsic_funcs/zve64d/00_configuration-setting_and_utility_functions.h"
 #include "intrinsic_funcs/zve64d/01_vector_loads_and_stores_functions.h"
 #include "intrinsic_funcs/zve64d/02_vector_unit-stride_segment_load_store_instructions_zvlsseg.h"
 #include "intrinsic_funcs/zve64d/03_vector_stride_segment_load_store_instructions_zvlsseg.h"
@@ -121,6 +172,17 @@ typedef double float64_t;
 #include "intrinsic_funcs/zve64d/09_vector_mask_functions.h"
 #include "intrinsic_funcs/zve64d/10_vector_permutation_functions.h"
 #include "intrinsic_funcs/zve64d/11_miscellaneous_vector_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64d/01_vector_loads_and_stores_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64d/02_vector_unit-stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve64d/03_vector_stride_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve64d/04_vector_indexed_segment_load_store_instructions_zvlsseg.h"
+#include "policy_funcs/intrinsic_funcs/zve64d/05_vector_integer_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64d/06_vector_fixed-point_arithmetic_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64d/07_vector_floating-point_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64d/08_vector_reduction_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64d/09_vector_mask_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64d/10_vector_permutation_functions.h"
+#include "policy_funcs/intrinsic_funcs/zve64d/11_miscellaneous_vector_functions.h"
 #endif // defined(SUPPORT_VEC_64D)
 
 #endif // RVV_INTRINSIC_H
