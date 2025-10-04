@@ -22,7 +22,7 @@ def save_file(root, output_file: pathlib.Path, contents):
         f.write("typedef double float64_t;\n")
 
         f.write(content)
-        
+
         f.write(f"#endif // #ifndef {path_str}")
 
 
@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
             record_status = False
             for line in lines:
-                if "```" in line:
+                if "----" in line:
                     content_f16.append("")
                     content_64d.append("")
                     content_64f.append("")
@@ -70,6 +70,9 @@ if __name__ == "__main__":
                     record_status = not record_status
                     continue
                 if record_status:
+                    # `vsetvl` has defined in <riscv_vector.h>
+                    if "vsetvl" in line:
+                        continue
                     line = line.replace("unsigned int", "unsigned long")
                     if "float16" in line:
                         content_f16.append(line)

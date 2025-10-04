@@ -1,0 +1,13 @@
+diff --git a/rvv-intrinsic-generator/clang_format_autogen.py b/rvv-intrinsic-generator/clang_format_autogen.py
+index 03b595f2..38ba095b 100644
+--- a/rvv-intrinsic-generator/clang_format_autogen.py
++++ b/rvv-intrinsic-generator/clang_format_autogen.py
+@@ -32,7 +32,7 @@ def run_clang_format(text) :
+     tmp.write(text)
+ 
+   # Run clang-format
+-  command = ["clang-format","-i", temp.name]
++  command = ["clang-format", "--style={ColumnLimit: 0}", "-i", temp.name]
+   retcode = call(command)
+   if retcode != 0:
+     sys.exit(1)
