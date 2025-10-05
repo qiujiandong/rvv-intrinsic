@@ -8,3 +8,7 @@ compile_commands.json
 # clangd
 .cache
 .clangd
+
+# release archive
+rvv-intrinsic_v*
+*.tar.gz
