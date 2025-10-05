@@ -21,7 +21,30 @@ Let's write some RVV code!
 
 ![demo](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDg0dW1zandwNzFkZGoyNWp3YTZlMnZwdzZ0aDYxdHhyaTZraWhkZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lQUGbpbTKQBWVulhxS/giphy.gif)
 
-## How to Use
+## Quick Start
+
+Download the release package from the [Releases Page](https://github.com/qiujiandong/rvv-intrinsic/releases).
+
+```shell
+wget https://github.com/qiujiandong/rvv-intrinsic/releases/latest/download/rvv-intrinsic.tar.gz
+tar -xzvf rvv-intrinsic.tar.gz
+cd rvv-intrinsic_v[tab]
+./configure
+```
+
+Then, the clangd configuration should work properly.
+
+## How to Generate the Header Files
+
+### 0. By Single Script
+
+To generate the header files by a single script, run the following command:
+
+```shell
+./scripts/release.sh
+```
+
+If you want to known the details, please follow the following steps:
 
 ### 1. Generate Header Files
 
@@ -37,13 +60,14 @@ navigate to the `rvv-intrinsic-doc` directory, and then run the following comman
 ```shell
 cd rvv-intrinsic-generator
 pip install -r requirements.txt
+git apply ../../scripts/clang-format.patch
 make
 ```
 
 The intrinsic files will be generated in `rvv-intrinsic-doc/auto-generated/` in
 `.adoc` format. We need to convert these to `.h` format.
 
-Run the script in the `scripts` directory:
+Run the following command in the root of this repo:
 
 ```shell
 ./scripts/run.py
