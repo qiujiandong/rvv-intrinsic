@@ -1,0 +1,50 @@
+#!/bin/bash
+# ===========================================================
+# Usage:
+#     ./configure [Options] [PREFIX]
+# Options:
+#     -h, --help     Print this help message
+# PREFIX:
+#      add clangd configs in PREFIX/config.yaml,
+#      default is $HOME/.config/clangd
+# ===========================================================
+
+function show_help() {
+    sed -n '/^# =\+/,/^# =\+/p' "$0" | sed 's/^# \{0,1\}//'
+}
+
+if [[ $1 == "-h" || $1 == "--help" ]]; then
+    show_help
+    exit 0
+fi
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+PREFIX=${1:-"$HOME/.config/clangd"}
+CONFIG_FILE="${PREFIX}/config.yaml"
+
+cat <<EOF > "/tmp/clangd_config.yaml"
+CompileFlags:
+  Add:
+    [
+      -include${SCRIPT_DIR}/rvv_intrinsic/rvv_intrinsic.h,
+      -I${SCRIPT_DIR}/rvv_intrinsic
+    ]
+EOF
+
+if [[ -e "$CONFIG_FILE" ]]; then
+    echo "Config file already exists: $CONFIG_FILE"
+    echo "Please add the following configs to $CONFIG_FILE manually"
+    echo "---------------------------------------------------------------------"
+    cat /tmp/clangd_config.yaml
+    echo "---------------------------------------------------------------------"
+else
+    if [[ ! -e $(dirname "$CONFIG_FILE") ]]; then
+        mkdir -p $(dirname "$CONFIG_FILE")
+    fi
+    echo "Add configs to $CONFIG_FILE"
+    echo "---------------------------------------------------------------------"
+    cat /tmp/clangd_config.yaml | tee "$CONFIG_FILE"
+    echo "---------------------------------------------------------------------"
+fi
+rm /tmp/clangd_config.yaml
+echo "Done!"
